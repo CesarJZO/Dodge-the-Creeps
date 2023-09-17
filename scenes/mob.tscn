@@ -64,3 +64,5 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_8b86d")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="OnVisibleOnScreenNotifier2DScreenExited"]
