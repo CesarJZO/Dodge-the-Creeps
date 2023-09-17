@@ -47,3 +47,5 @@ frame_progress = 0.904229
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_elc4r")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
