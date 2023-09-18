@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 namespace DodgeTheCreeps;
 
@@ -11,6 +10,13 @@ public sealed partial class Player : Area2D
     [Export] private bool startHidden;
     [Export] private int speed = 400;
     private Vector2 _screenSize;
+
+    public void Start(Vector2 position)
+    {
+        Position = position;
+        Show();
+        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
+    }
 
     public void OnBodyEntered(PhysicsBody2D body)
     {
