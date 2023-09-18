@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://co1sgrkm2khke"]
 
-[ext_resource type="Script" path="res://scripts/hud.cs" id="1_627tb"]
 [ext_resource type="FontFile" uid="uid://dm24cxg5l4fgb" path="res://fonts/Xolonium-Regular.ttf" id="1_p2i2v"]
+[ext_resource type="Script" path="res://scripts/HUD.cs" id="1_wcrye"]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource("1_627tb")
+script = ExtResource("1_wcrye")
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -16,7 +16,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_p2i2v")
 theme_override_font_sizes/font_size = 64
-text = "5"
+text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -60,3 +60,4 @@ wait_time = 2.0
 one_shot = true
 
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="OnMessageTimerTimeout"]
