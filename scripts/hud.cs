@@ -1,5 +1,7 @@
 using Godot;
 
+namespace DodgeTheCreeps;
+
 public sealed partial class HUD : CanvasLayer
 {
     [Signal]
